@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "basic-project"
+requires-python = ">= 3.9"
+authors = [
+  {name = "foobar", email = "foo@bar.com"},
+]
+maintainers = [
+  {name = "foobar", email = "foo@bar.com"},
+]
+description = "An Example Project"
+readme = "README.md"
+license-files = ["LICENSE.txt"]
+keywords = ["Python Project", "Automation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "seaborn",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://localhost.com"
+Documentation = "https://localhost.com"
+Repository = "https://github.com/Alextibtab/python-project-template"
+
+[tool.hatch.version]
+path = "src/project/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/project"] 
